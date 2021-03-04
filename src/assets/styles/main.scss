@@ -1,0 +1,170 @@
+#page-wrapper {
+    background-color: #edeff1;
+    z-index: 1;
+    // height: 100%;
+    position: relative;
+}
+
+.sticky-block {
+    position: sticky;
+    top: 64px;
+    z-index: 2;
+    background-color: #fff;
+    &.dialog {
+      .head-title {
+        font-size: 18px;
+      }
+      .nav-content {
+        border-bottom: solid 1px #ebebeb;
+      }
+    }
+}
+
+.isBigScreen,
+.isSmallScreen {
+  display: flex;
+}
+
+.charbar {
+  //   position: absolute;
+  z-index: 9999;
+  .mat-drawer-backdrop {
+    position: fixed !important;
+  }
+  .mat-drawer-backdrop.mat-drawer-shown {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+// -----------------------------------------------------------------
+
+#signinContainer {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+
+  // background-image: url('./assets/images/background-sign-in-1.jpg');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+
+  background-color: #0F1D51;
+
+  .signinBox {
+    width: 500px;
+    height: 100%;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    // box-shadow: 0px 0px 8px rgb(168, 168, 168);
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .aboveContainer {
+      width: 100%;
+
+      h2 {
+        color: $dark-title;
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: 12px;
+        color: $light-p;
+      }
+
+      .formContainer {
+        width: 100%;
+        margin-top: 40px;
+
+        input {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 20px;
+          outline: none;
+        }
+
+        button {
+          padding: 10px 20px;
+          color: white;
+          font-weight: bold;
+          transition: 0.5s;
+          background-color: crimson;
+          border: none; 
+          outline: none;
+          margin-bottom: 20px;
+
+          &:hover {
+            cursor: pointer;
+            transition: 0.5s;
+            background-color: rgb(194, 19, 54);
+          }
+        }
+
+        .checkboxContainer {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 20px;
+        
+          input[type=checkbox] {
+            width: 10px;
+            margin-right: 10px;
+            margin-bottom: 0px;
+          }
+
+          label {
+            font-size: 14px;
+            color: $light-p;
+          }
+        }
+      }
+    }
+
+    .belowContainer {
+      width: 100%;
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        font-size: 12px;
+        color: $light-p;
+
+        span:first-child {
+          margin-left: 0px;
+        }
+
+        span {
+          margin-left: 7px;
+          margin-right: 7px;
+        }
+
+        span:last-child {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+
+  .signInContent {
+    padding: 40px;
+    text-align: right;
+
+    h1 {
+      color: white;
+    }
+
+    p {
+      color: white;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+} 
